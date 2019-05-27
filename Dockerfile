@@ -3,6 +3,7 @@ WORKDIR /go/src/github.com/mchmarny/simple-app/
 COPY . .
 RUN pwd
 RUN ls -lah
+RUN sleep 300
 RUN CGO_ENABLED=0 go build -v -o app
 
 FROM scratch
